@@ -1,0 +1,20 @@
+version = 0.1
+[default]
+[default.pipeline_bootstrap]
+[default.pipeline_bootstrap.parameters]
+oidc_provider_url = "https://token.actions.githubusercontent.com"
+oidc_client_id = "sts.amazonaws.com"
+github_org = "tnobe"
+github_repo = "tetsuo-nobe"
+deployment_branch = "main"
+oidc_provider = "github-actions"
+permissions_provider = "OpenID Connect (OIDC)"
+
+[myconfig]
+[myconfig.pipeline_bootstrap]
+[myconfig.pipeline_bootstrap.parameters]
+pipeline_execution_role = "arn:aws:iam::330174381929:role/aws-sam-cli-managed-myconfig-PipelineExecutionRole-1I9G59M2LZKPN"
+cloudformation_execution_role = "arn:aws:iam::330174381929:role/aws-sam-cli-managed-mycon-CloudFormationExecutionR-GH15BMWC6RZB"
+artifacts_bucket = "aws-sam-cli-managed-myconfig-pipe-artifactsbucket-71qi9cwa7rd1"
+image_repository = ""
+region = "ap-northeast-1"
